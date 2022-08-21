@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<h2>JavaScript Class Gettter/Setter</h2>
+
+<p>很多开发者在属性名称前使用下划线字符 _ 将 getter/setter 与实际属性分开。</p>
+
+<p id="demo"></p>
+
+<script>
+class Runoob {
+  constructor(name) {
+    this._sitename = name;
+  }
+  get sitename() {
+    return this._sitename;
+  }
+  set sitename(x) {
+    this._sitename = x;
+  }
+}
+ 
+let noob = new Runoob("菜鸟教程");
+ 
+document.getElementById("demo").innerHTML = noob.sitename;
+
+</script>
+
+</body>
+</html>
