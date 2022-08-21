@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<h2>字符串转换为 Date 对象</h2>
+
+<p id="demo"></p>
+
+<script>
+
+var text = '{ "name":"Runoob", "initDate":"2013-12-14", "site":"www.runoob.com"}';
+var obj = JSON.parse(text, function (key, value) {
+	if (key == "initDate") {
+	    return new Date(value);
+	} else {
+	    return value;
+}});
+
+document.getElementById("demo").innerHTML = obj.name + "创建日期：" + obj.initDate;
+
+</script>
+
+</body>
+</html>
